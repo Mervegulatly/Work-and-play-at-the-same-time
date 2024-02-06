@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Hakkımızda</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="logo">
+            <img
+              src="img.jpg"
+              alt="Logo"
+              style="cursor: pointer"
+              onclick="console.log(); redirectToHome();"
+            />
+          </div>
+          <div class="navbar-right">
+            <ul class="nav-links">
+              <li><a href="index.html">Ana Sayfa</a></li>
+              <li><a href="todolist.html">Todo-List</a></li>
+              <li><a href="sayiTahmin.html">Sayı Tahmin Oyunu</a></li>
+              <li><a href="about.html">Hakkımda</a></li>
+              <li><a href="contact.html">İletişim</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container2">
+      <h1>Hakkımda</h1>
+      <section id="about">
+        <p>
+          Merhaba! Bu projede TODO listesi ve sayı tahmin oyunu bulunmaktadır.
+        </p>
+        <p>
+          Projeyi geliştirirken kullanılan teknolojiler: HTML, CSS, JavaScript
+          dilleridir.
+        </p>
+        <h2>Teşekkürler :D</h2>
+      </section>
+      <script>
+        function redirectToHome() {
+          var homeUrl = "index.html";
+          window.location.href = homeUrl;
+        }
+      </script>
+    </div>
+  </body>
+</html>

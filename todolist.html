@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Çalışma Sitesi</title>
+  </head>
+  <body style="background-image: url(arkaplan.jpg)">
+    <header>
+      <header>
+        <nav>
+          <div class="container">
+            <div class="backlogo">
+              <button id="goBackBtn">
+                <img src="back.jpg" alt="Geri Git" />
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </header>
+
+    <div class="container2">
+      <h1>YAPILMASI GEREKENLER</h1>
+      <form id="form">
+        <input
+          type="text"
+          class="input"
+          id="input"
+          placeholder="Enter your todo"
+          autocomplete="off"
+        />
+        <ul class="todos" id="todos"></ul>
+      </form>
+
+      <small style="color: rgb(95, 90, 90)">
+        Tamamladıklarını sol tık ile kapat! <br />
+        Silmek için sağ tık kullan!
+      </small>
+    </div>
+
+    <div class="container2"></div>
+    <script src="goBackBtn.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

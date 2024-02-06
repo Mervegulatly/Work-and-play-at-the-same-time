@@ -1,0 +1,180 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p style="font-variant: small-caps; width: 50px">merve</p>
+    <p style="border: solid 10px green"></p>
+
+    <style>
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        border: 10px solid pink;
+      }
+    </style>
+
+    <p style="border-bottom-style: dashed">deneme</p>
+
+    <style>
+      div {
+        padding: 10px;
+        border: 2px solid black;
+      }
+      #box {
+        width: 90%;
+      }
+      * {
+        margin: 20;
+      }
+    </style>
+    <div>
+      <div id="box"></div>
+    </div>
+    <div style="text-align: center">Uzun metin</div>
+    <p style="text-decoration: line-through">text-decora`on:line-through</p>
+    <p style="text-decoration: overline">text-decora`on:line-through</p>
+    <p style="text-transform: uppercase">hello world! (uppercase)</p>
+    <p style="text-indent: 260px">İki salrlık bir yazı eklenecek</p>
+    <p style="letter-spacing: -2px">Gerekli metin</p>
+    <p style="word-spacing: 10px">Metin metin metin</p>
+    <p style="line-height: 8px">
+      Metin<br />
+      Metin <br />
+      Metin
+    </p>
+    <p style="writing-mode: vertical-rl">vertical lr deneme writing-mode</p>
+
+    <style>
+      h2 {
+        text-shadow: 20px 15px 5px rgb(3, 3, 3);
+      }
+    </style>
+    <h2>merhaba</h2>
+    <h2 style="background-color: rgb(229, 229, 160)">Arkaplan rengini</h2>
+
+    <ul style="list-style-position: inside">
+      <li>Anasayfa</li>
+      <li>Hakkımda</li>
+      <li>İletişim</li>
+    </ul>
+
+    <table>
+      <tr>
+        <th>Ürün Adı</th>
+        <th>Fiyat</th>
+      </tr>
+      <tr>
+        <td>Laptop</td>
+        <td>2000 TL</td>
+      </tr>
+    </table>
+
+    <p>Paragraffff</p>
+    <script>
+      alert("Dikkattt");
+    </script>
+
+    <style>
+      div {
+        column-count: 5;
+        column-rule: 10px solid rgb(28, 28, 29);
+      }
+    </style>
+    <div>
+      Uzun bir metin yazılır.zun bir metin yazılırzun bir metin yazılırzun bir
+      metin yazılırzun bir metin yazılır
+    </div>
+    <button onclick="Document.write(Selamm)">Tıkla</button>
+
+    <script>
+      var x = (5 + 6) * 10;
+      alert(x);
+    </script>
+
+    <script>
+      let simdi = new Date();
+      document.write(simdi);
+      document.write(simdi.getDay);
+      document.write(simdi.getHours);
+      let dogumTarihi = new Date(1984, 5, 18);
+      document.write(dogumTarihi);
+    </script>
+
+    <script>
+      let sayilar = [3, 2, 3, 4, 5, 6];
+      for (let i = 0; i < sayilar.length; i++) {
+        document.write(sayilar[i] + "</br>");
+      }
+      for (let i of sayilar) {
+        document.write(i + "</br>");
+      }
+    </script>
+
+    <script>
+      let sayilar2 = [2, 4, 3, 5, 12, 11];
+      let tekSayilar = [];
+      for (let sayi of sayilar2) {
+        if (sayi % 2 == 1) {
+          tekSayilar.push(sayi);
+        }
+      }
+      for (let i in tekSayilar) {
+        document.write(tekSayilar[i]);
+      }
+    </script>
+
+    <script>
+      let cümle = ["Merhaba ", "Yazılım ", "Mühendisliği"];
+      let cümle2 = [...cümle];
+      document.write(...cümle);
+      document.write(...cümle2);
+      cümle[0] = "Selam";
+      document.write(...cümle);
+      document.write(...cümle2);
+    </script>
+
+    <script>
+      let kullanici = {
+        ad: "Melike",
+        soyad: "ŞİŞECİ",
+        yas: 38,
+        adres: {
+          mahalle: "Lagus",
+          sehir: "Isparta",
+        },
+      };
+      document.write(kullanici.adres.mahalle);
+    </script>
+
+    <script>
+      let setOrnek = new Set();
+      setOrnek.add(1);
+      setOrnek.add(2);
+      setOrnek.add(3);
+      setOrnek.add(3);
+      let dizi = [...setOrnek]; //dizinin içine atılır
+      setOrnek.delete(1);
+      for (let i of dizi) {
+        document.write(i);
+      }
+    </script>
+    <script>
+      document.getElementById("p1").innerHTML =
+        document.write("Merhaba JavaScript");
+      document.getElementById("p1").style.color = "red";
+      document.getElementById("p1").style.fontSize = "30px";
+    </script>
+
+    <button onclick="alert(Date());">Buraya tıkla</button>
+
+    <script>
+      function Topla(sayi1, sayi2) {
+        alert(sayi1 + sayi2);
+      }
+    </script>
+    <button onclick="Topla(5, 20);">Buraya tıkla</button>
+  </body>
+</html>

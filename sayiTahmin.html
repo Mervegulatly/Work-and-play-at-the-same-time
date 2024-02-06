@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sayı Tahmin Oyunu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body style="background-color: rgba(218, 188, 166, 0.562)">
+    <div>
+      <header>
+        <nav>
+          <div class="container">
+            <div class="backlogo">
+              <button id="goBackBtn">
+                <img src="back.jpg" alt="Geri Git" />
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="container2">
+      <h1>Sayı Tahmin Oyunu</h1>
+      <p id="message" style="color: rgb(59, 56, 56)">
+        Bir sayı girin ve kontrol edin!
+      </p>
+      <input
+        type="number"
+        id="guessInput"
+        placeholder="Tahmininizi girin"
+        style="border-radius: 10px; height: 50px"
+      />
+      <div style="margin-top: 10px">
+        <button onclick="checkGuess()">Kontrol Et</button>
+      </div>
+      <p id="result"></p>
+    </div>
+    <script src="sayiTahmin.js"></script>
+    <script src="goBackBtn.js"></script>
+  </body>
+</html>

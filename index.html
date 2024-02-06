@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Hem Oyna Hem Çalış</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="logo" id="logo">
+            <img
+              src="img.jpg"
+              alt="Logo"
+              style="cursor: pointer"
+              onclick="console.log(); redirectToHome();"
+            />
+          </div>
+          <div class="navbar-right">
+            <ul class="nav-links">
+              <li><a href="#">Ana Sayfa</a></li>
+              <li><a href="todolist.html">Todo-List</a></li>
+              <li><a href="sayiTahmin.html">Sayı Tahmin Oyunu</a></li>
+              <li><a href="about.html">Hakkımda</a></li>
+              <li><a href="contact.html">İletişim</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="containerNote">
+      <section id="note-app">
+        <h2>Not Defteri</h2>
+        <div>
+          <textarea
+            id="note-input"
+            placeholder="Notunuzu buraya yazın..."
+          ></textarea>
+        </div>
+        <div>
+          <button onclick="saveNote()">Notu Kaydet</button>
+        </div>
+      </section>
+
+      <div class="saved-notes-container">
+        <h2>Kaydedilen Notlar</h2>
+        <div id="saved-notes">
+          <script>
+            function saveNote() {
+              var noteText = document.getElementById("note-input").value;
+              var noteContainer = document.getElementById("saved-notes");
+              var newNote = document.createElement("div");
+              newNote.innerText = noteText;
+
+              // Sil butonunu otomatik olarak ekleme
+              var deleteButton = document.createElement("button");
+              deleteButton.innerText = "Sil";
+              deleteButton.onclick = function () {
+                noteContainer.removeChild(newNote);
+              };
+              newNote.appendChild(deleteButton);
+
+              noteContainer.appendChild(newNote);
+              alert("Notunuz kaydedildi: " + noteText);
+            }
+            function redirectToHome() {
+              var homeUrl = "index.html";
+              window.location.href = homeUrl;
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <div class="containerBottom">
+      <div>
+        <section id="theme-switcher">
+          <h2>Tema Değiştirme</h2>
+          <label for="theme-select">Tema Seçin:</label>
+          <select id="theme-select" onchange="changeTheme()">
+            <option value="light">Açık Tema</option>
+            <option value="dark">Koyu Tema</option>
+          </select>
+        </section>
+        <script>
+          function changeTheme() {
+            var selectedTheme = document.getElementById("theme-select").value;
+            document.body.className = selectedTheme;
+          }
+        </script>
+
+        <style>
+          body.light {
+            background-color: #fff;
+            color: #333;
+          }
+
+          body.dark {
+            background-color: #333;
+            color: #fff;
+          }
+        </style>
+      </div>
+
+      <div>
+        <section id="clock">
+          <h2>Güncel Saat</h2>
+          <div id="current-time"></div>
+        </section>
+        <script>
+          function updateClock() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+            document.getElementById("current-time").innerText =
+              hours + ":" + minutes + ":" + seconds;
+          }
+
+          setInterval(updateClock, 1000);
+        </script>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
